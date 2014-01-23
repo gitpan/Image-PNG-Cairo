@@ -21,9 +21,9 @@ no_index:
     - inc
 requires:
   Cairo: 0
-  Image::PNG::Libpng: 0.24
+  Image::PNG::Libpng: 0.28
   perl: 5.008001
 resources:
   bugtracker: https://github.com/benkasminbullock/image-png-cairo/issues
   repository: git://github.com/benkasminbullock/image-png-cairo.git
-version: 0.02
+version: 0.03

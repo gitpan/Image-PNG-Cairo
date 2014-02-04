@@ -26,4 +26,4 @@ requires:
 resources:
   bugtracker: https://github.com/benkasminbullock/image-png-cairo/issues
   repository: git://github.com/benkasminbullock/image-png-cairo.git
-version: 0.04
+version: 0.05

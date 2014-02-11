@@ -1,3 +1,8 @@
+0.06 2014-02-11
+
+* Incompatible change due to change in libpng. Please upgrade! Sorry
+  about this.
+
 0.05 2014-02-04
 
 * Extended example in documentation with illustration.

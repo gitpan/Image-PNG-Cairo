@@ -65,7 +65,7 @@ WriteMakefile (
     AUTHOR => 'Ben Bullock <bkb@cpan.org>',
     LICENSE => 'perl',
     PREREQ_PM => {
-	'Image::PNG::Libpng' => '0.28',
+	'Image::PNG::Libpng' => '0.31',
 	'Cairo' => '0',
     },
     META_MERGE => {

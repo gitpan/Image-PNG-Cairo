@@ -1,6 +1,3 @@
-#!/home/ben/software/install/bin/perl
-use warnings;
-use strict;
 =encoding UTF-8
 
 =head1 NAME
@@ -30,7 +27,24 @@ data.
 
     my $png = cairo_to_png ($surface);
 
-Only surfaces of type 'argb32' are supported.
+The input, C<$surface>, is a L<Cairo::ImageSurface> object. Only Cairo
+surfaces of type 'argb32' are supported. The return value is an
+L<Image::PNG::Libpng> object, with its image dimensions, bit depth,
+colour type, and image data taken from C<$surface>. C<$png>
+corresponds to the return value of the L<Image::PNG::Libpng> method
+C<create_write_struct> with the methods C<set_IHDR> and C<set_rows>
+and C<set_transforms> applied to it using data extracted from
+C<$surface>.
+
+Caveat: The actual image data within C<$surface> is not copied,
+C<$png> only contains pointers to the image data, and the image data
+is converted into the PNG format when C<$png> is written. Thus if
+C<$surface> is destroyed before C<$png> is written, unexpected results
+may occur. (This is a bug.)
+
+C<$png> is set up using the Image::PNG::Libpng method
+C<set_transforms> such that the PNG image data is transformed on
+writing from the Cairo image data format to the PNG format.
 
 =head1 EXAMPLES
 
